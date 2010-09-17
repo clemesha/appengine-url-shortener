@@ -1,0 +1,24 @@
+A URL shortener that runs on Google App Engine
+==============================================
+
+THIS APP IS A WORK IN PROGRESS.
+
+
+Features
+--------
+    - User based Stats (keeps click counter)
+    - Allows for custom path names (e.g. "/my-named-path")
+
+
+Example
+-------
+
+from google.appengine.api import users
+from models import Link
+
+user = users.get_current_user()
+l = Link(user=user, url="http://google.com/a")
+l.put()
+
+print l.key().id() #use 'id' with 'base62.base62_encode'
+

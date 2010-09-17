@@ -1,0 +1,36 @@
+body {
+  background-color: #F9F9F9; }
+
+h1 {
+  font-family: "JunctionRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:bold;
+  color:#C8D7E9;
+  text-shadow:1px -1px 2px gray;
+  font-size:500%;
+  margin-left:10px;
+}
+
+h2 {
+  color: #909090;
+  font-style: italic;
+  margin: 0px 0px 0px 0px; 
+  text-align: center;
+}
+
+h3 {
+  color: #a0a0a0;
+  font-size:130%; 
+  text-align: center;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+a.clean {
+  text-decoration: none;
+  border: none;
+}
+
+.italic {
+  font-style: italic; 
+}
+

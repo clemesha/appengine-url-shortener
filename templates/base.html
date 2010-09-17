@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="">
+  <!--[if lt IE 8]><link rel="stylesheet" href="/static/css/ie.css" type="text/css"><![endif]-->
+  <link type='text/css' href="/static/css/base.css" media="all" rel="stylesheet" />
+  <link type='text/css' href="/static/css/main.css" media="all" rel="stylesheet" />
+  <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type='text/javascript' src="/static/js/main.js"></script>
+  {% block extrahead %}{% endblock %}
+</head>
+<body>
+ 
+<div class="container">
+
+   {% if user %}
+     <div class="userbar">Welcome, <b>{{ user }}!</b> | <a href="{{ logout_url }}">Logout</a></div>
+   {% else %}
+     <div class="userbar">Welcome! <a href="{{ login_url }}">Sign In</a></div>
+   {% endif %}
+
+  {% block content %}
+  {% endblock %}
+
+
+</div><!-- end "container" -->
+
+{% block extrafoot %}{% endblock %}
+
+</body>
+</html>
